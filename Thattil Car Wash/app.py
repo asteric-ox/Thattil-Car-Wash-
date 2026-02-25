@@ -650,7 +650,7 @@ def approve_pickup(booking_id):
         # Send phone details to staff email
         try:
             sender_email = os.getenv('MAIL_USER', 'thattilservicecentree@gmail.com')
-            sender_password = os.getenv('MAIL_PASS', 'yxty obey rllu thyg')
+            sender_password = os.getenv('MAIL_PASS', 'jycr hgbu cyjp bfst')
             staff_email = "delvindavis031@gmail.com"
             lat_lng = booking.get('location', 'N/A')
             maps_link = f"https://www.google.com/maps?q={lat_lng}" if ',' in str(lat_lng) else '#'
@@ -729,7 +729,7 @@ def update_pickup_status(booking_id):
         if new_status == 'Confirmed':
             try:
                 sender_email = os.getenv('MAIL_USER', 'thattilservicecentree@gmail.com')
-                sender_password = os.getenv('MAIL_PASS', 'yxty obey rllu thyg')
+                sender_password = os.getenv('MAIL_PASS', 'jycr hgbu cyjp bfst')
                 staff_email = "delvindavis031@gmail.com"
                 lat_lng = booking.get('location', 'N/A')
                 maps_link = f"https://www.google.com/maps?q={lat_lng}" if ',' in str(lat_lng) else '#'
@@ -1392,7 +1392,7 @@ def submit_feedback():
 # =========================
 def send_booking_email(booking_id, name, to_email, package, date, time_val, vehicle_no):
     sender_email = os.getenv('MAIL_USER', 'thattilservicecentree@gmail.com')
-    sender_password = os.getenv('MAIL_PASS', 'yxty obey rllu thyg')
+    sender_password = os.getenv('MAIL_PASS', 'jycr hgbu cyjp bfst')
     
     if not sender_email or not sender_password:
         print("DEBUG: Missing email credentials in .env")
@@ -1454,8 +1454,8 @@ def send_booking_email(booking_id, name, to_email, package, date, time_val, vehi
         print(f"DEBUG: Email sending error: {e}")
 
 def send_otp_email(to_email, otp):
-    sender_email = os.getenv('MAIL_USER', 'campuseventura@gmail.com')
-    sender_password = os.getenv('MAIL_PASS', 'fmkc cjhp cobn ncuj')
+    sender_email = os.getenv('MAIL_USER', 'thattilservicecentree@gmail.com')
+    sender_password = os.getenv('MAIL_PASS', 'jycr hgbu cyjp bfst')
     
     if not sender_email or not sender_password:
         return
@@ -1574,7 +1574,7 @@ def reset_password():
 
 def send_staff_pickup_email(customer_name, contact_phone, login_phone, lat, lng):
     sender_email = os.getenv('MAIL_USER', 'thattilservicecentree@gmail.com')
-    sender_password = os.getenv('MAIL_PASS', 'yxty obey rllu thyg')
+    sender_password = os.getenv('MAIL_PASS', 'jycr hgbu cyjp bfst')
     staff_email = "delvindavis031@gmail.com"
     
     if not sender_email or not sender_password:
@@ -1819,7 +1819,7 @@ def verify_booking():
 
 def send_verified_email(name, to_email, vehicle_no):
     sender_email = os.getenv('MAIL_USER', 'thattilservicecentree@gmail.com')
-    sender_password = os.getenv('MAIL_PASS', 'yxty obey rllu thyg')
+    sender_password = os.getenv('MAIL_PASS', 'jycr hgbu cyjp bfst')
     
     if not sender_email or not sender_password:
         return
